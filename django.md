@@ -54,9 +54,26 @@ These are instructions for deploying a Django site to a Linux server hosting mul
    ```
 
 2. Clone latest source to `sites/DOMAIN/source`
+
 3. Deal with secrets - copy a file, set environment variables, whatever
+
 4. Edit settings if necessary
+
 5. Make a virtualenv in `sites/DOMAIN`
+
 6. Install required packages
+
 7. Collect Static
+
 8. Migrate
+
+To actually deploy navigate to `deploy_tools` folder and
+
+```
+fab deploy host=dev@staging.shiftalert.co
+
+and assuming all is well
+
+fab deploy host=dev@shiftalert.co
+```
+
